@@ -1,0 +1,27 @@
+Hardware : 
+i3 / 3,2GHz / 8Gb Mem / SSD / GPU Quadro 4000 2Gb VDR.
+System :
+Ubuntu 20.04 TLS
+
+  238  23/10/20 22:37:09 sudo apt-get update && sudo apt-get install -y openalpr openalpr-daemon openalpr-utils libopenalpr-dev
+  239  23/10/20 22:48:21 sudo apt-get install libopencv-dev libtesseract-dev git cmake build-essential libleptonica-dev
+  240  23/10/20 22:56:05 sudo apt-get install beanstalkd
+  241  23/10/20 22:57:20 git clone https://github.com/openalpr/openalpr.git
+  242  23/10/20 22:57:56 cd openalpr/src
+  243  23/10/20 22:57:56 mkdir build
+  244  23/10/20 22:57:59 cd build
+  245  23/10/20 22:58:12 cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DCMAKE_INSTALL_SYSCONFDIR:PATH=/etc ..
+Need to Install CURL :)
+  246  23/10/20 23:00:44 apt upgrade && sudo apt install curl && sudo apt-get install libcurl4-openssl-dev
+  247  23/10/20 23:02:36 cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DCMAKE_INSTALL_SYSCONFDIR:PATH=/etc ..
+Some Libz more :)
+  251  23/10/20 23:06:30 apt install liblog4cplus-1.1-9
+  254  23/10/20 23:07:51 apt install liblog4cplus-dev
+  255  23/10/20 23:08:11 apt install liblog4cplus-dbg
+  256  23/10/20 23:08:26 cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DCMAKE_INSTALL_SYSCONFDIR:PATH=/etc ..
+  257  23/10/20 23:09:05 make
+  260  23/10/20 23:16:25 make install
+  258  23/10/20 23:16:02 wget http://plates.openalpr.com/h786poj.jpg -O lp.jpg
+  259  23/10/20 23:16:06 alpr lp.jpg
+  
+  It's Working :) 
